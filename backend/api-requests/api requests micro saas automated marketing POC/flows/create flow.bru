@@ -1,0 +1,28 @@
+meta {
+  name: create flow
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/flows
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "instruction": "hello!",
+    "hourInDay": 10,
+    "minuteInDay": 0,
+    "occourences": "dayToDay"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

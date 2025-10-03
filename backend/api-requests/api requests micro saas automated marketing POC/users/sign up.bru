@@ -1,0 +1,22 @@
+meta {
+  name: sign up
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/signup
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "rafaeldesenhos99@gmail.com",
+    "password": "123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

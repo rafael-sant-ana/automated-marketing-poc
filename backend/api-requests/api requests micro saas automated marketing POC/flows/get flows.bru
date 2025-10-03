@@ -1,0 +1,19 @@
+meta {
+  name: get flows
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/flows
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+}

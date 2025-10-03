@@ -1,0 +1,27 @@
+meta {
+  name: create receiver
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/receivers
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "email": "rafaelsantana18059@gmail.com",
+    "name": "Rafael Sant'Ana",
+    "flow_id": 2
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: get receivers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/flows/2/receivers
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+settings {
+  encodeUrl: true
+}
